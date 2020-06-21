@@ -279,6 +279,9 @@ letter-spacing: 0.02em;
   line-height: 1.87;
   text-align: center;
   letter-spacing: 0.03em;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 } */
 
 /* Преимущества без заголовка */
@@ -331,6 +334,222 @@ border-radius: 4px;
 /* ЛИНИЯ НИЖНЯЯ */
 .application {
   border-top: 1px solid #ECECEC;
+}
+
+/* Форма */
+
+.backd.modal {
+  pointer-events: none;
+  transform: scale(1.08);
+}
+
+.backd {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+  transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal {
+  padding: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+}
+
+.modal_title {
+  display: inline-block;
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: #212121;
+}
+
+.modal_close {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  top: 8px;
+  left: 490px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+}
+
+.modal_closeicon {
+  fill: #000000;
+  width: 18px;
+  height: 18px;
+}
+
+.modal_closeicon:hover {
+  fill: #2196F3;
+  
+}
+
+.modal_field {
+  position: relative;
+  /* margin-bottom: 28px; */
+}
+
+.modal_field:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.modal_input {
+  padding: 12px 35px;
+  font: inherit;
+  border: 1px solid #2a2a2a;
+  border-radius: 3px;
+  width: 448px;
+  height: 40px;
+}
+
+.modal_input-coment {
+  height: 120px;
+}
+
+.modallabel {
+  position: absolute;
+  top: 12px;
+  left: 42px;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.01em;
+
+  color: #757575;
+}
+
+.modal_label-coment {
+  left: 16px;
+}
+
+.modal_field:focus-within > .modallabel,
+.modal_input:not(:placeholder-shown) ~ .modallabel {
+  transform: translate(-26px, -35px);
+}
+
+.modal_field:focus-within > .modal_label-coment,
+.modal_input:not(:placeholder-shown) ~ .modal_label-coment {
+  transform: translate(0px, -35px);
+}
+
+.modal_field:focus-within > .modallabel {
+  color: #2196F3;
+}
+
+.modal_field:focus-within > .modalicon {
+  fill: #2196F3;
+}
+
+
+.modalicon {
+  position: absolute;
+  fill: #212121;
+  top: 12px;
+  left: 16px;
+  width: 18px;
+  height: 18px;
+}
+
+.hiddn {
+  /* -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; */
+
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* .hiddn:checked + .ckeckbox_icon {
+  background-color: var(--accent-color);
+} */
+
+.checkbox {
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.check {
+  display: inline-block;
+  
+  width: 15px;
+  height: 15px;
+  border: 2px solid #212121;
+  border-radius: 4px;
+}
+
+.check:hover {
+  border: none;
+  background-image: url('../images/cube1.svg');
+  background-color: var(--accent-color);
+  background-size: contain;
+  background-origin: content-box;
+}
+
+.ckeckbox_icon {
+  display: none;
+  width: 16px;
+  height: 15px;
+  fill: #212121;
+}
+
+.checkbox_link,
+.checkbox_text {
+  margin: 0;
+  padding: 0;
+
+  display: inline-block;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+
+  color: #757575;
+}
+
+.checkbox_link {
+  color: #2196F3;
+}
+
+.modal_button-send {
+  background-color: #2196F3;
+  width: 200px;
+  margin: 0 auto;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  padding:10px 55px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+
+  color: #FFFFFF;
 }
 
 /* Все заголовки */
@@ -559,11 +778,14 @@ border-radius: 4px;
   background-color: var(--accent-color);
 
   font-family: Roboto;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 16px;
   line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
+  border-radius: 4px;
+
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 
   padding: 10px 32px;
