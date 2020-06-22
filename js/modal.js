@@ -1,14 +1,14 @@
-( ( )  =>  { 
-    const  refs  =  { 
-      openModalBtn : document . querySelector ( '[data-modal-open]' ) , 
-      closeModalBtn : document . querySelector ( '[data-modal-close]' ) , 
-      модальный : документ . querySelector ( '[data-modal]' ) , 
-    } ;
+(() => {
+    const refs = {
+      openModalBtn: document.querySelector("[data-modal-open]"),
+      closeModalBtn: document.querySelector("[data-modal-close]"),
+      modal: document.querySelector("[data-modal]"),
+    };
   
-    рефов . openModalBtn . addEventListener ( 'click' ,  toggleModal ) ; 
-    рефов . closeModalBtn . addEventListener ( 'click' ,  toggleModal ) ;
+    refs.openModalBtn.addEventListener("click", toggleModal);
+    refs.closeModalBtn.addEventListener("click", toggleModal);
   
-    function  toggleModal ( )  { 
-      refs . модальный . classList . переключатель («скрыто») ; 
-    } 
-  } ) ( ) ;
+    function toggleModal(){
+    refs.modal.classList.toggle("is-hidden");
+    }
+  })();

@@ -61,11 +61,14 @@
                 <h1 class="hero-title">Эффективные решения<br>для вашего бизнеса</h1>
                 <!-- <ul> -->
                 <ul class="b">
-                    <li><a href="" class="button primary">Заказать услугу</a></li>
+                    <li><a class="button primary" data-modal-open="">Заказать услугу</a></li>
+                    <!-- <button class="button primary" data-modal-open="">Заказать услугу</button> -->
                 </ul>
             </section>
 
-            <div class="backd" data-modal="">
+                            <!-- Выплывающее окно -->
+
+            <div class="backdrop is-hidden" data-modal="">
                     <div class="modal">
                         <div class="modal_close" data-modal-close="">
                             <svg class="modal_closeicon">
@@ -104,7 +107,7 @@
                             </div>
     
                             <label class="checkbox">
-                                <input type="checkbox" class="hiddn">
+                                <input type="checkbox" class="hidden">
                                 <div class="check">
                                     <!-- <svg class="ckeckbox_icon">
                                         <use href="./images/symboldefs11.svg#icon-cube1"></use>

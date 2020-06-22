@@ -338,12 +338,12 @@ border-radius: 4px;
 
 /* Форма */
 
-.backd.modal {
+.backdrop.modal {
   pointer-events: none;
   transform: scale(1.08);
 }
 
-.backd {
+.backdrop {
   position: fixed;
   top: 0;
   left: 0;
@@ -352,6 +352,12 @@ border-radius: 4px;
   background-color: rgba(0, 0, 0, 0.2);
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
   transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .modal {
@@ -467,7 +473,7 @@ border-radius: 4px;
   height: 18px;
 }
 
-.hiddn {
+.hidden {
   /* -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none; */
