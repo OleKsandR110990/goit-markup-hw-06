@@ -108,11 +108,11 @@
     
                             <label class="checkbox">
                                 <input type="checkbox" class="hidden">
-                                <div class="check">
+                                <span class="ckeckbox_icon">
                                     <!-- <svg class="ckeckbox_icon">
                                         <use href="./images/symboldefs11.svg#icon-cube1"></use>
                                     </svg> -->
-                                </div>
+                                </span>
                                 <p class="checkbox_text">Соглашаюсь с рассылкой и принимаю</p>
                                 <a class="checkbox_link" href=""><ins>Условия договора</ins></a>
                             </label> <br>
@@ -499,13 +499,23 @@
             
                     <div class="join-mael">
                         <b class="join">подписаться на рассылку</b>
-            
+<!--             
                         <form action="#">
-                            <b><input value="E-mail"></b>
+                            <input value="E-mail">
                             <ul class="bf">
-                            <a href="" class="button primary">Подписаться</a>
+                            <button href="" class="button primary">Подписаться</button>
                             </ul>
-                        </form>
+                        </form> -->
+                        <div class="bf">
+                            <input class="mailling" type="email" name="email" id="mailling-form" placeholder="E-mail">
+                            <br>
+                            <button class="button primary">
+                              Подписаться
+                              <svg class="airplane" width="24" height="24">
+                                <use href="./images/symbol-defs(1).svg#icon-paper_airplane"></use>
+                              </svg>
+                            </button>
+                          </div>
                     </div>
                     
                 </div>

@@ -474,9 +474,9 @@ border-radius: 4px;
 }
 
 .hidden {
-  /* -webkit-appearance: none;
+  -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none; */
+  appearance: none;
 
   position: absolute;
   width: 1px;
@@ -497,7 +497,7 @@ border-radius: 4px;
   margin-bottom: 30px;
 }
 
-.check {
+.ckeckbox_icon {
   display: inline-block;
   
   width: 15px;
@@ -506,20 +506,31 @@ border-radius: 4px;
   border-radius: 4px;
 }
 
-.check:hover {
+.checkbox input:checked + .ckeckbox_icon{
+  border: none;
+  background-color: var(--accent-color);
+  background-image: url('../images/cube1.svg');
+
+  background-size: contain;
+  background-origin: content-box;
+  border-color: var(--accent-color);
+}
+
+/* .checkbox:hover  .ckeckbox_icon  {
   border: none;
   background-image: url('../images/cube1.svg');
   background-color: var(--accent-color);
   background-size: contain;
   background-origin: content-box;
-}
+} */
 
-.ckeckbox_icon {
+/* .ckeckbox_icon {
   display: none;
   width: 16px;
   height: 15px;
   fill: #212121;
-}
+} */ 
+
 
 .checkbox_link,
 .checkbox_text {
@@ -802,13 +813,34 @@ border-radius: 4px;
 }
 
 .bf {
-  padding: 10px 45px;
+  display: flex;
   min-width: 200px;
   margin-top: 0;
   margin-bottom: 0;
 }
 
+.mailling {
+  position: relative;
+  padding-left: 16px;
+  width: 350px;
+  height: 50px;
+  background: #2F303A;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-sizing: border-box;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  border-radius: 4px;
+}
+
+.airplane {
+padding-left: 10px;
+
+}
+
 .bf .button {
+  display: inline-block;
+  display: flex;
+  align-items: center;
   color: var(--pimary-white-color);
   background-color: var(--accent-color);
 
@@ -820,8 +852,9 @@ border-radius: 4px;
   letter-spacing: 0.03em;
   border-radius: 4px;
 
-  padding: 10px 45px;
+  padding: 10px 28px 10px 29px;
   min-width: 200px;
+  margin-left: 12px;
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -1135,6 +1168,9 @@ footer {
 }
 .join-to {
   margin-right: 94px;
+}
+.join-mael {
+  
 }
 
 /* Finish */
